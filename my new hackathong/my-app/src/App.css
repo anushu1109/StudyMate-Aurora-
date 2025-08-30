@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Basic App Layout & Colors */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg,
+    #1E3A8A, #0F172A
+  );
+  justify-content: center;
+  align-items: center;
+}
+.App {
+  font-family: sans-serif;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* prevent scroll behind overlay */
+}
+/* Header Styles */
+.header {
+  height: 70px; /* Slightly taller header */
+  width: 99%; /* Fixed width for better control */
+  /*max-width: 1200px; /* Max width on larger screens */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  position: absolute;
+  top: 20px;
+  z-index: 10;       /* above main body */
+
+}
+
+.header .left {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between logo and title */
+}
+
+.logo {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.title {
+  font-size: 1.25rem;
+}
+
+.header .right {
+  display: flex;
+  align-items: center;
+}
+
+/* Button Styles */
+.my-btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 50px; /* Pill-shaped button */
+  background: rgba(66, 82, 228, 0.2);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+.main-body {
+  margin-top: 60px;  /* push below header */
+  height: calc(100vh - 60px);
+  padding: 20px;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.my-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px); /* Subtle lift */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.my-btn:active {
+  transform: translateY(2px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+/* Sidebar hidden by default */
+.sidebar {
+  position: fixed;
+  left: -250px; /* hide it outside screen */
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #333;
+  color: white;
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+    background: linear-gradient(135deg,
+    #712b7a,   /* Rich Purple */
+    #a4508b    /* Muted Pink */
+  );
+}
+
+/* Sidebar visible */
+.sidebar.open {
+  left: 0;
+}
+.sidebar.open ~ .content {
+  margin-left: 250px; /* optional: push content when sidebar opens */
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 900;
+  transition: opacity 0.3s ease;
+}
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* full viewport */
+  z-index: 1; /* base layer */
+  position: relative;
+}

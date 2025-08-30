@@ -1,0 +1,192 @@
+/* Background */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #712b7a, #a4508b);
+  font-family: "Poppins", sans-serif;
+  flex-direction: column;
+}
+
+/* Center Box */
+.login-box {
+  display: flex;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  overflow: hidden;
+  width: 900px;
+  height: 500px;
+}
+
+/* Left Side */
+.login-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 50px;
+  text-align: center;
+}
+
+.login-left h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.login-left p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* Divider - Neon Line */
+.divider {
+  width: 2px;
+  background: linear-gradient(180deg, #ff9a9e, #fad0c4, #ffdde1);
+  opacity: 0.7;
+}
+
+/* Right Side */
+.login-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 60px;
+}
+.login-right form {
+  width: 100%;               /* take full width of right half */
+  max-width: 320px;          /* limit input width */
+}
+.login-right h2 {
+  color: white;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+/* Floating Label Inputs */
+.input-group {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 30px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 40px 14px 40px; /* leave space for icon */
+  border: none;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  outline: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  box-shadow: 0 0 12px #ffb6e1;
+  background: rgba(255,255,255,0.2);
+}
+
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  color: rgba(255,255,255,0.7);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 30px;
+  font-size: 12px;
+  color: #ffdde1;
+}
+
+/* Icons */
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: rgba(255,255,255,0.7);
+  font-size: 18px;
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  max-width: 300px;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #712b7a;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  outline: none; 
+}
+
+.login-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 12px #ffb6e1; /* custom glow instead */
+}
+
+.login-btn:active{
+    transform: translateY(2px) scale(1.02);
+}
+.login-btn:focus {
+  outline: none;            /* kill the default focus outline */
+}
+/* Extras */
+.extras {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.extras a {
+  color: #ffdde1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.extras a:hover {
+  text-decoration: underline;
+}
+.google-btn{
+  width: 60px;           /* height and width must be equal */
+  height: 60px;
+  border-radius: 45%;    /* makes it circular */
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;         /* centers content */
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  outline: none;
+}
+.google-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 12px #ffb6e1; /* custom glow instead */
+}
+
+.google-btn:active{
+    transform: translateY(2px) scale(1.02);
+}
+.google-btn:focus {
+  outline: none;            /* kill the default focus outline */
+}

@@ -1,0 +1,132 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg,
+    #1E3A8A, #0F172A
+  );
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  background: #2a1a4f;
+  color: white;
+}
+
+.chat-box {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.message.left {
+  background: #4b3f72;
+  align-self: flex-start;
+}
+
+.message.right {
+  background: #7e57c2;
+  align-self: flex-end;
+}
+
+.message img.chat-image {
+  max-width: 200px;
+  margin-top: 8px;
+  border-radius: 5px;
+}
+
+.pdf-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.pdf-link:hover {
+  text-decoration: underline;
+}
+
+.chat-input {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  background: #3c2a5f;
+}
+
+.chat-input input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.chat-input button {
+  padding: 8px 15px;
+  border: none;
+  background: #6a1b9a;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background: #8e24aa;
+}
+
+.file-label {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 5px;
+  background: #5e35b1;
+  display: flex;
+  align-items: center;
+}
+
+.file-label input[type="file"] {
+  display: none;
+}
+.pdf-bubble {
+  display: flex;
+  align-items: center;
+  background: #f1f0f0;
+  color: #333;
+  padding: 6px 10px;
+  border-radius: 8px;
+  max-width: 70%;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.pdf-icon {
+  margin-right: 6px;
+}
+
+.pdf-name {
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

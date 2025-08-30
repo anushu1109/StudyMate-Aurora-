@@ -1,0 +1,16 @@
+# requirements.txt
+
+# Core LangChain and AI libraries
+langchain
+torch
+chromadb
+huggingface_hub
+transformers
+sentence-transformers
+accelerate
+bitsandbytes
+
+# PDF and OCR processing
+PyMuPDF
+pytesseract
+Pillow
